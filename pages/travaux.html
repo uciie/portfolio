@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travaux académiques de Lucie Pan - MIAGE">
+    <title>Travaux - Portfolio MIAGE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Styles spécifiques pour la page Travaux */
+        .work-item {
+            background-color: white;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .work-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .work-title {
+            flex: 1;
+        }
+        
+        .work-title h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .work-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+        
+        .work-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .work-description {
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+        
+        .work-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        
+        .tag {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .work-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-download:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-preview {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-preview:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+        
+        .breadcrumb a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #64748b;
+        }
+        
+        .empty-state p {
+            margin-top: 1rem;
+            font-size: 1.125rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- HEADER & NAVIGATION (copié depuis index.html) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Lucie Pan</h1>
+                <p class="subtitle">Étudiante MIAGE - Développement Web</p>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="travaux.html" class="nav-link">Travaux</a></li>
+                    <li><a href="cours.html" class="nav-link">Cours</a></li>
+                    <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                    <li><a href="projet-crm.html" class="nav-link highlight">Projet CRM</a></li>
+                    <li><a href="soutenance.html" class="nav-link">Soutenance</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Accueil</a>
+                <span>›</span>
+                <span>Travaux</span>
+            </div>
+            <h1>📚 Mes Travaux</h1>
+            <p>Dossiers et exercices réalisés en classe</p>
+        </div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container" style="padding: 2rem 1rem; min-height: 60vh;">
+        
+        <!-- Travail 1 : TP Odoo -->
+        <article class="work-item">
+            <div class="work-header">
+                <div class="work-title">
+                    <h3>📦 TP Odoo - Gestion d'une petite entreprise</h3>
+                    <div class="work-meta">
+                        <span>
+                            📅 Date : Janvier 2025
+                        </span>
+                        <span>
+                            📄 Format : PDF
+                        </span>
+                        <span>
+                            ⏱️ Durée : 2 séances
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work-description">
+                <p>
+                    <strong>Objectif :</strong> Découvrir et manipuler l'ERP Odoo pour gérer une petite entreprise fictive 
+                    spécialisée dans la vente de matériel informatique. Ce TP couvre l'ensemble du cycle : 
+                    de la commande fournisseur au stock, jusqu'à la vente client et la facturation.
+                </p>
+                
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Compétences développées :</h4>
+                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                    <li>Configuration d'une entreprise dans Odoo</li>
+                    <li>Gestion des modules Ventes, Achats, Stock et Facturation</li>
+                    <li>Création et gestion des produits et partenaires (clients/fournisseurs)</li>
+                    <li>Suivi du cycle complet : commande → réception → vente → facturation</li>
+                    <li>Analyse des rapports de ventes et gestion des stocks</li>
+                </ul>
+                
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Contenu du dossier :</h4>
+                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                    <li>Captures d'écran de chaque étape du processus</li>
+                    <li>Configuration de l'entreprise "TechShop"</li>
+                    <li>Gestion des utilisateurs et droits d'accès</li>
+                    <li>Scénarios d'achat et de vente avec mise à jour automatique des stocks</li>
+                    <li>Reporting et analyse des performances</li>
+                </ul>
+            </div>
+            
+            <div class="work-tags">
+                <span class="tag">Odoo</span>
+                <span class="tag">ERP</span>
+                <span class="tag">Gestion de stock</span>
+                <span class="tag">Facturation</span>
+                <span class="tag">Ventes</span>
+            </div>
+            
+            <div class="work-actions">
+                <a href="../assets/docs/travaux/TP_Odoo_pan_lucie.pdf" class="btn-download" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Télécharger le PDF
+                </a>
+                <a href="../assets/docs/travaux/TP_Odoo_pan_lucie.pdf" class="btn-preview" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    Prévisualiser
+                </a>
+            </div>
+        </article>
+
+        <!-- Section pour ajouter d'autres travaux -->
+        <div class="empty-state" style="background-color: #f8fafc; border-radius: 8px; margin-top: 2rem;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2" style="margin: 0 auto;">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+            <p>D'autres travaux seront ajoutés prochainement...</p>
+        </div>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lucie Pan - Portfolio MIAGE | Tous droits réservés</p>
+            <p>Site codé à la main avec HTML5, CSS3 et JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
