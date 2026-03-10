@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails du projet CRM développé par Lucie Pan">
+    <title>Projet CRM - Portfolio MIAGE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Styles spécifiques pour la présentation du projet */
+        .project-details {
+            padding: var(--spacing-md) 0;
+        }
+        
+        .project-hero {
+            background-color: var(--bg-light);
+            border-radius: 12px;
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .project-info h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .tech-badge {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* Conteneur pour les boutons */
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap; /* Pour le mobile */
+        }
+
+        /* Style unifié pour les boutons dans cette section */
+        .project-links .btn {
+            text-decoration: none;
+            display: inline-flex; /* Aligne icône et texte */
+            align-items: center;
+            gap: 8px;
+            /* Force le style secondaire qui fonctionne (fond sombre, texte clair) */
+            background-color: var(--secondary-color) !important;
+            color: white !important;
+            border: 1px solid var(--secondary-color) !important;
+        }
+        
+        .project-links .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Pour inverser la couleur du logo GitHub si nécessaire */
+        .github-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .project-hero { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Lucie Pan</h1>
+                <p class="subtitle">Étudiante MIAGE - Développement Web</p>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="travaux.html" class="nav-link">Travaux</a></li>
+                    <li><a href="cours.html" class="nav-link">Cours</a></li>
+                    <li><a href="projet-crm.html" class="nav-link highlight">Projet CRM</a></li>
+                    <li><a href="soutenance.html" class="nav-link">Soutenance</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Accueil</a> <span>></span> <span>Projet CRM</span>
+            </div>
+            <h1>🚀 Projet CRM</h1>
+            <p>Système de Gestion de la Relation Client (Customer Relationship Management)</p>
+        </div>
+    </div>
+
+    <main class="container project-details">
+        
+        <section class="project-hero">
+            <div class="project-info">
+                <h2>Aperçu du Projet</h2>
+                <p>
+                    Ce projet consiste en la création d'une application web complète de CRM permettant aux entreprises 
+                    de centraliser leurs interactions clients, de suivre leurs opportunités de vente et de gérer 
+                    leurs pipelines de manière efficace.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">React / Next.js</span>
+                    <span class="tech-badge">Git</span>
+                    <span class="tech-badge">Vercel</span>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://crm-zeta-rosy.vercel.app" target="_blank" class="btn btn-secondary">
+                        <span>🚀</span> Démo Live
+                    </a>
+                    
+                    <a href="https://github.com/uciie/crm" target="_blank" class="btn btn-secondary">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="18" alt="GitHub" class="github-icon">
+                        Code Source GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="project-image">
+                <img src="../assets/images/project-crm-preview.png" alt="Aperçu interface CRM" style="width:100%; border-radius:8px; box-shadow: var(--shadow-lg);">
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Fonctionnalités Clés</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>👥 Gestion des Contacts</h3>
+                    <p>Centralisation des fiches clients, historique des échanges et coordonnées.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📈 Pipeline de Vente</h3>
+                    <p>Visualisation claire du cycle de vente, du premier contact à la clôture.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚙️ Automatisation</h3>
+                    <p>Mise en place de workflows pour optimiser les tâches répétitives.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Tableaux de Bord</h3>
+                    <p>Analyse des performances et suivi des indicateurs clés (KPI).</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--bg-light); padding: 2rem; border-radius: 8px; text-align: center; margin-top: 2rem; border: 1px solid var(--border-color);">
+            <h2>Documentation Technique</h2>
+            <p style="margin-bottom: 1.5rem;">Pour plus de détails sur l'architecture, le modèle de données et les choix techniques :</p>
+            <a href="https://github.com/uciie/crm/blob/main/docs/doc_technique.pdf" target="_blank" class="btn btn-download" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background-color: var(--accent-color); color: white; padding: 0.8rem 1.5rem; border-radius: 4px;">
+                📄 Consulter le Document Technique (PDF)
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="footer" style="background-color: var(--secondary-color); color: white; padding: 2rem 0; margin-top: 4rem; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 Lucie Pan - Portfolio MIAGE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
