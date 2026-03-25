@@ -3,112 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Détails du projet CRM développé par Lucie Pan">
-    <title>Projet CRM - Portfolio MIAGE</title>
+    <meta name="description" content="Projet CRM de Lucie Pan — Portfolio MIAGE">
+    <title>Projet CRM — Portfolio MIAGE</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* Styles spécifiques pour la présentation du projet */
-        .project-details {
-            padding: var(--spacing-md) 0;
+        .doc-cta {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 2rem;
+            text-align: center;
+            margin-top: var(--sp-md);
         }
-        
-        .project-hero {
-            background-color: var(--bg-light);
-            border-radius: 12px;
-            padding: var(--spacing-md);
-            margin-bottom: var(--spacing-md);
-            border: 1px solid var(--border-color);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+        .doc-cta h2 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        .doc-cta p {
+            color: var(--text-muted);
+            font-size: 0.9375rem;
+            margin-bottom: 1.25rem;
+        }
+        .btn-accent {
+            display: inline-flex;
             align-items: center;
-        }
-
-        .project-info h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .tech-stack {
-            display: flex;
             gap: 0.5rem;
-            flex-wrap: wrap;
-            margin: 1.5rem 0;
-        }
-
-        .tech-badge {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-        }
-
-        /* Conteneur pour les boutons */
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            flex-wrap: wrap; /* Pour le mobile */
-        }
-
-        /* Style unifié pour les boutons dans cette section */
-        .project-links .btn {
+            padding: 0.65rem 1.4rem;
+            background-color: rgba(153, 225, 229, 0.2);
+            color: var(--teal-text);
+            border: 1.5px solid rgba(153, 225, 229, 0.5);
+            border-radius: var(--r-sm);
+            font-size: 0.875rem;
+            font-weight: 600;
             text-decoration: none;
-            display: inline-flex; /* Aligne icône et texte */
-            align-items: center;
-            gap: 8px;
-            /* Force le style secondaire qui fonctionne (fond sombre, texte clair) */
-            background-color: var(--secondary-color) !important;
-            color: white !important;
-            border: 1px solid var(--secondary-color) !important;
+            transition: all 0.2s ease;
         }
-        
-        .project-links .btn:hover {
-            opacity: 0.9;
-        }
-
-        /* Pour inverser la couleur du logo GitHub si nécessaire */
-        .github-icon {
-            filter: brightness(0) invert(1);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow-sm);
-            border-top: 4px solid var(--accent-color);
-        }
-
-        @media (max-width: 768px) {
-            .project-hero { grid-template-columns: 1fr; }
+        .btn-accent:hover {
+            background-color: rgba(153, 225, 229, 0.35);
+            transform: translateY(-1px);
         }
     </style>
 </head>
 <body>
-    
+
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>Lucie Pan</h1>
-                <p class="subtitle">Étudiante MIAGE - Développement Web</p>
+                <a href="../index.html">
+                    <h1>Lucie Pan</h1>
+                    <p class="subtitle">Étudiante MIAGE · Développement Web</p>
+                </a>
             </div>
-            
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="../index.html#about" class="nav-link">À propos</a></li>
                     <li><a href="travaux.html" class="nav-link">Travaux</a></li>
                     <li><a href="cours.html" class="nav-link">Cours</a></li>
-                    <li><a href="projet-crm.html" class="nav-link highlight">Projet CRM</a></li>
+                    <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                    <li><a href="projet-crm.html" class="nav-link crm-link active">Projet CRM</a></li>
                     <li><a href="soutenance.html" class="nav-link">Soutenance</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille</a></li>
                 </ul>
             </nav>
         </div>
@@ -116,23 +77,27 @@
 
     <div class="page-header">
         <div class="container">
-            <div class="breadcrumb">
-                <a href="../index.html">Accueil</a> <span>></span> <span>Projet CRM</span>
-            </div>
-            <h1>🚀 Projet CRM</h1>
-            <p>Système de Gestion de la Relation Client (Customer Relationship Management)</p>
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="../index.html">Accueil</a>
+                <span>&rsaquo;</span>
+                <span>Projet CRM</span>
+            </nav>
+            <h1>Projet CRM</h1>
+            <p>Application web de gestion de la relation client — livrable principal</p>
         </div>
     </div>
 
-    <main class="container project-details">
-        
+    <main class="container" style="padding: 2rem 0; min-height: 60vh;">
+
+        <!-- Vue d'ensemble -->
         <section class="project-hero">
             <div class="project-info">
-                <h2>Aperçu du Projet</h2>
+                <p class="section-label">Aperçu du projet</p>
+                <h2>Système de Gestion de la Relation Client</h2>
                 <p>
-                    Ce projet consiste en la création d'une application web complète de CRM permettant aux entreprises 
-                    de centraliser leurs interactions clients, de suivre leurs opportunités de vente et de gérer 
-                    leurs pipelines de manière efficace.
+                    Application web complète permettant aux entreprises de centraliser leurs interactions 
+                    clients, de suivre leurs opportunités de vente et de gérer leurs pipelines 
+                    de manière efficace.
                 </p>
                 <div class="tech-stack">
                     <span class="tech-badge">JavaScript</span>
@@ -140,60 +105,67 @@
                     <span class="tech-badge">Git</span>
                     <span class="tech-badge">Vercel</span>
                 </div>
-                
                 <div class="project-links">
-                    <a href="https://crm-zeta-rosy.vercel.app" target="_blank" class="btn btn-secondary">
-                        <span>🚀</span> Démo Live
+                    <a href="https://crm-zeta-rosy.vercel.app" target="_blank" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        Démo live
                     </a>
-                    
                     <a href="https://github.com/uciie/crm" target="_blank" class="btn btn-secondary">
-                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="18" alt="GitHub" class="github-icon">
-                        Code Source GitHub
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        Code source
                     </a>
                 </div>
             </div>
             <div class="project-image">
-                <img src="../assets/images/project-crm-preview.png" alt="Aperçu interface CRM" style="width:100%; border-radius:8px; box-shadow: var(--shadow-lg);">
+                <img src="../assets/images/project-crm-preview.png" alt="Aperçu interface CRM" style="width:100%;border-radius:var(--r-md);box-shadow:var(--shadow-lg);">
             </div>
         </section>
 
+        <!-- Fonctionnalités -->
         <section>
-            <h2 class="section-title">Fonctionnalités Clés</h2>
+            <p class="section-label">Ce que fait l'application</p>
+            <h2 class="section-title">Fonctionnalités clés</h2>
             <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>👥 Gestion des Contacts</h3>
+                <div class="feature-card" style="border-top: 3px solid var(--teal);">
+                    <h3>Gestion des Contacts</h3>
                     <p>Centralisation des fiches clients, historique des échanges et coordonnées.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>📈 Pipeline de Vente</h3>
+                <div class="feature-card" style="border-top: 3px solid #d4a853;">
+                    <h3>Pipeline de Vente</h3>
                     <p>Visualisation claire du cycle de vente, du premier contact à la clôture.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>⚙️ Automatisation</h3>
+                <div class="feature-card" style="border-top: 3px solid var(--peach);">
+                    <h3>Automatisation</h3>
                     <p>Mise en place de workflows pour optimiser les tâches répétitives.</p>
                 </div>
-                <div class="feature-card">
-                    <h3>📊 Tableaux de Bord</h3>
+                <div class="feature-card" style="border-top: 3px solid var(--rose);">
+                    <h3>Tableaux de Bord</h3>
                     <p>Analyse des performances et suivi des indicateurs clés (KPI).</p>
                 </div>
             </div>
         </section>
 
-        <section style="background-color: var(--bg-light); padding: 2rem; border-radius: 8px; text-align: center; margin-top: 2rem; border: 1px solid var(--border-color);">
+        <!-- Doc technique -->
+        <div class="doc-cta">
             <h2>Documentation Technique</h2>
-            <p style="margin-bottom: 1.5rem;">Pour plus de détails sur l'architecture, le modèle de données et les choix techniques :</p>
-            <a href="https://github.com/uciie/crm/blob/main/docs/doc_technique.pdf" target="_blank" class="btn btn-download" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background-color: var(--accent-color); color: white; padding: 0.8rem 1.5rem; border-radius: 4px;">
-                📄 Consulter le Document Technique (PDF)
+            <p>Architecture, modèle de données et choix techniques détaillés dans le document ci-dessous.</p>
+            <a href="https://github.com/uciie/crm/blob/main/docs/doc_technique.pdf" target="_blank" class="btn-accent">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                Consulter le document technique (PDF)
             </a>
-        </section>
+        </div>
 
     </main>
 
-    <footer class="footer" style="background-color: var(--secondary-color); color: white; padding: 2rem 0; margin-top: 4rem; text-align: center;">
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Lucie Pan - Portfolio MIAGE. Tous droits réservés.</p>
+            <p>&copy; 2025 Lucie Pan — Portfolio MIAGE &nbsp;·&nbsp; Tous droits réservés</p>
         </div>
     </footer>
 
+    <script src="../js/script.js"></script>
 </body>
 </html>
