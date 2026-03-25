@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Certifications et attestations de Lucie Pan - MIAGE">
+    <title>Certifications - Portfolio MIAGE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Réutilisation de l'harmonisation présente dans cours.html */
+        .work-item {
+            background-color: white;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--accent-color); /* Couleur orange pour les certifs */
+        }
+        
+        .work-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .work-title h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .work-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+        
+        .work-description {
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+        
+        .btn-preview {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-preview:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--secondary-color), #1e293b);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb a { color: white; text-decoration: none; opacity: 0.8; }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Lucie Pan</h1>
+                <p class="subtitle">Étudiante MIAGE - Développement Web</p>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="travaux.html" class="nav-link">Travaux</a></li>
+                    <li><a href="cours.html" class="nav-link">Cours</a></li>
+                    <li><a href="certifications.html" class="nav-link active">Certifications</a></li>
+                    <li><a href="projet-crm.html" class="nav-link highlight">Projet CRM</a></li>
+                    <li><a href="soutenance.html" class="nav-link">Soutenance</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Accueil</a>
+                <span>›</span>
+                <span>Certifications</span>
+            </div>
+            <h1>🏆 Certifications</h1>
+            <p>Attestations de compétences et formations suivies</p>
+        </div>
+    </div>
+
+    <main class="container" style="padding: 2rem 1rem; min-height: 60vh;">
+        
+        <article class="work-item">
+            <div class="work-header">
+                <div class="work-title">
+                    <h3>🛡️ Protection des Données (RGPD)</h3>
+                    <div class="work-meta">
+                        <span>📅 Obtenus le : 19 Mars 2026</span>
+                        <span>Issuer : CNIL / Formation</span>
+                    </div>
+                </div>
+            </div>
+            <div class="work-description">
+                <p>Validation des compétences concernant la protection des données personnelles. Ces certifications attestent de la compréhension des enjeux juridiques et techniques liés au RGPD.</p>
+                <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                    <li><strong>Certificat Principal :</strong> Maîtrise des principes de base.</li>
+                    <li><strong>Module Complémentaire :</strong> Approfondissement des règles de conformité.</li>
+                </ul>
+            </div>
+            <div class="work-actions" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="../assets/docs/certificats/Certificat_rgpd-cnil.pdf" class="btn-preview" target="_blank">RGPD Module 1 : Notions de Base</a>
+                <a href="../assets/docs/certificats/Certificat_rgpd_2_protec_donnees.pdf" class="btn-preview" target="_blank">RGPD Module 2 : Protection des Données</a>
+                <a href="../assets/docs/certificats/Certificat_rgpd_3_resp_acteurs.pdf" class="btn-preview" target="_blank">RGPD Module 3 : Responsabilités des Acteurs</a>
+            </div>
+        </article>
+
+        <article class="work-item">
+            <div class="work-header">
+                <div class="work-title">
+                    <h3>🎓 Simplilearn Certificates</h3>
+                    <div class="work-meta">
+                        <span>📅 Obtenu le : 19 Mars 2026</span>
+                    </div>
+                </div>
+            </div>
+            <div class="work-description">
+                <p>Certification technique obtenue via la plateforme Simplilearn validant des acquis spécifiques en informatique.</p>
+            </div>
+            <div class="work-actions">
+                <a href="../assets/docs/certificats/certificates.simplicdn.pdf" class="btn-preview" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg> 
+                    Voir le certificat</a>
+            </div>
+        </article>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lucie Pan - Portfolio MIAGE | Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

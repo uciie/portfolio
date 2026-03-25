@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veille technologique et enrichissement personnel de Lucie Pan - MIAGE">
+    <title>Veille - Portfolio MIAGE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* ===================================
+           STYLES SPÉCIFIQUES – VEILLE
+           =================================== */
+
+        /* En-tête de page (identique aux autres pages) */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* Carte de veille — reprend la logique de .work-item */
+        .veille-item {
+            background-color: white;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .veille-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .veille-title h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .veille-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #64748b;
+            flex-wrap: wrap;
+        }
+
+        .veille-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* Bloc mis en avant pour l'apport en veille */
+        .veille-insight {
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .veille-insight strong {
+            color: #0369a1;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        /* Tags — reprend .tag de travaux.html */
+        .work-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Boutons d'action — cohérents avec travaux.html */
+        .work-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-github-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #1b1f23;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-github-dark:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-preview {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-preview:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Section vide — prochainement */
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #64748b;
+        }
+
+        .empty-state p {
+            margin-top: 1rem;
+            font-size: 1.125rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Lucie Pan</h1>
+                <p class="subtitle">Étudiante MIAGE - Développement Web</p>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="travaux.html" class="nav-link">Travaux</a></li>
+                    <li><a href="cours.html" class="nav-link">Cours</a></li>
+                    <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                    <li><a href="projet-crm.html" class="nav-link highlight">Projet CRM</a></li>
+                    <li><a href="soutenance.html" class="nav-link">Soutenance</a></li>
+                    <li><a href="veille.html" class="nav-link active">Veille</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- EN-TÊTE DE LA PAGE -->
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Accueil</a>
+                <span>›</span>
+                <span>Veille Technologique</span>
+            </div>
+            <h1>🔍 Veille &amp; Enrichissement Personnel</h1>
+            <p>Exploration autonome de ressources techniques pour approfondir mes compétences</p>
+        </div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container" style="padding: 2rem 1rem; min-height: 60vh;">
+
+        <!-- =============================================
+             PROJET : PROTOCOLE HDLC
+             ============================================= -->
+        <article class="veille-item">
+
+            <div class="veille-header">
+                <div class="veille-title">
+                    <h3>🔗 Implémentation et analyse du protocole HDLC</h3>
+                    <div class="veille-meta">
+                        <span>🎓 Cours : IFT 3325 – Téléinformatique</span>
+                        <span>💻 Langage : Java</span>
+                        <span>👥 Binôme : Vi Phung &amp; Lucie Pan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-description">
+                <p>
+                    Ce projet académique consiste en l'implémentation d'une version simplifiée du protocole 
+                    <strong>HDLC (High-Level Data Link Control)</strong>, un standard fondamental opérant 
+                    à la couche liaison de données du modèle OSI. En Java, nous avons codé de zéro un émetteur 
+                    (<code>Sender</code>) et un récepteur (<code>Receiver</code>) capables de communiquer via 
+                    socket TCP, en respectant les mécanismes propres au protocole.
+                </p>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Ce que ce projet m'a apporté :</h4>
+                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                    <li>
+                        <strong>Structure des trames :</strong> compréhension des champs FLAG, adresse, 
+                        contrôle et données qui composent une trame HDLC.
+                    </li>
+                    <li>
+                        <strong>Délimitation &amp; bit stuffing :</strong> implémentation du bourrage de bits 
+                        pour distinguer les délimiteurs de début/fin des données utiles.
+                    </li>
+                    <li>
+                        <strong>Contrôle d'erreur :</strong> mise en œuvre du calcul et de la vérification 
+                        de la valeur CRC (Cyclic Redundancy Check), avec gestion des exceptions 
+                        <code>InvalidCrcException</code> et <code>InvalidBitStuffException</code>.
+                    </li>
+                    <li>
+                        <strong>Architecture logicielle :</strong> organisation en packages 
+                        (<code>entite</code>, <code>utils</code>, <code>exception</code>), écriture 
+                        de tests unitaires et génération de documentation Javadoc.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- APPORT EN VEILLE -->
+            <div class="veille-insight">
+                <strong>💡 Apport pour comprendre les réseaux modernes</strong>
+                HDLC est l'ancêtre direct de nombreux protocoles encore utilisés aujourd'hui : PPP 
+                (Point-to-Point Protocol) sur les liaisons WAN, LLC dans les réseaux Ethernet, ou encore 
+                les couches radio des standards mobiles (GSM, LTE). Étudier HDLC à bas niveau — trames 
+                bit par bit, acquittements, retransmissions — permet de saisir concrètement les 
+                mécanismes que les abstractions modernes (TCP/IP, HTTP/2) dissimulent. C'est une 
+                base solide pour lire des RFC, comprendre des captures Wireshark ou aborder 
+                des sujets tels que la QoS et la fiabilité des transmissions.
+            </div>
+
+            <div class="work-tags">
+                <span class="tag">Réseaux</span>
+                <span class="tag">HDLC</span>
+                <span class="tag">Couche liaison</span>
+                <span class="tag">CRC</span>
+                <span class="tag">Bit stuffing</span>
+                <span class="tag">Java</span>
+                <span class="tag">Socket TCP</span>
+                <span class="tag">Protocoles OSI</span>
+            </div>
+
+            <div class="work-actions">
+                <!-- Lien vers le dépôt GitHub -->
+                <a href="https://github.com/uciie/IFT3325_protocole_HDLC"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-github-dark">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Voir le code source sur GitHub
+                </a>
+
+                <!-- Lien direct vers le rapport PDF -->
+                <a href="https://github.com/uciie/IFT3325_protocole_HDLC/blob/main/doc/Devoir2_IFT3325_Rapport.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-preview">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                    Lire le rapport technique (PDF)
+                </a>
+            </div>
+
+        </article>
+        <!-- FIN PROJET HDLC -->
+
+        <!-- Placeholder pour les prochains projets de veille -->
+        <div class="empty-state" style="background-color: #f8fafc; border-radius: 8px; margin-top: 2rem; border: 2px dashed #cbd5e1;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2" style="margin: 0 auto;" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <p>D'autres sujets de veille seront ajoutés prochainement...</p>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lucie Pan - Portfolio MIAGE | Tous droits réservés</p>
+            <p>Site codé à la main avec HTML5, CSS3 et JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
